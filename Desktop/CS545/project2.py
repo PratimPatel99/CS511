@@ -52,10 +52,6 @@ months = {"JAN" : 1, "FEB":2, "MAR":3, "APR":4, "MAY":5, "JUN":6, "JUL":7, "AUG"
 
 for element in root_elements:
     age = 0
-    if(element.get_tag() == "INDI"):
-        arrayFamily = gedcom_parser.get_families(IndividualElement)
-        print("testing")
-        print(arrayFamily)
     if isinstance(element, IndividualElement):
         (first, last) = element.get_name()
         if(element.is_deceased() == True):
